@@ -2,26 +2,37 @@ package buoi2;
 
 public class SDDiem {
 	public static void main(String[] args) {
-		// Tạo điểm A
-		Diem A = new Diem(3, 4);
-		System.out.print("Tọa độ điểm A: ");
-		A.hienThi();
-
-		// Tạo điểm B từ bàn phím
+		Diem A = new Diem(3,4);
+		System.out.println("toa do diem A: ");
+		A.in();
+		
 		Diem B = new Diem();
-		B.nhapDiem();
-		System.out.print("Tọa độ điểm B: ");
-		B.hienThi();
-
-		// Tạo điểm C đối xứng với B qua gốc tọa độ
-		Diem C = new Diem(-B.giaTriX(), -B.giaiTriY());
-		System.out.print("Tọa độ điểm C (đối xứng với B): ");
-		C.hienThi();
-
-		// Khoảng cách từ B đến tâm O
-		System.out.println("Khoảng cách từ B đến O: " + B.khoangCach());
-
-		// Khoảng cách từ A đến B
-		System.out.println("Khoảng cách từ A đến B: " + A.khoangCach(B));
+		System.out.println("nhap tao do diem B: ");
+		B.nhap();
+		System.out.println("toa do diem B: ");
+		B.in();
+		
+		Diem C = new Diem(-B.layX(), -B.layY());
+		System.out.print("Toa do diem doi xung C:");
+		C.in();
+		
+		System.out.println("khoang cach OB= "+ B.Kcach());
+		System.out.println("khoang cach AB= "+ B.kcach(A));
+		
+		//su dung xay dung sao chep
+		Diem D = new Diem(C);
+		System.out.println("Toa do D:");
+		D.in();
+		
+		//su dung ham in co doi so
+		D.in("toa do diem D");
+		
+		// su dung ham toString tai dinh nghia
+		System.out.println("toa do diem D:" + D);
+		
+		// sao chep dia chi tham chieu
+		//nghia la gia C bang bao nhieu thi E bang bay nhieu
+		Diem E = C;
+		System.out.println("toa do E:" + E);
 	}
 }

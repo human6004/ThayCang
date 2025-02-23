@@ -1,59 +1,67 @@
 package buoi2;
 
+import java.util.Scanner;
+
 public class Diem {
 	private int x, y;
 
-	// Hàm xây dựng mặc nhiên
-	public Diem() {
-		this.x = 0;
-		this.y = 0;
+	// ham xay dung mac nhien
+	public Diem() { // 1
+		x = 0;
+		y = 0;
 	}
 
-	// Hàm xây dựng có 2 tham số
+	// ham xay dung co doi so
 	public Diem(int x, int y) {
 		this.x = x;
 		this.y = y;
 	}
 
-	// Nhập tọa độ từ bàn phím
-	public void nhapDiem() {
-		java.util.Scanner scanner = new java.util.Scanner(System.in);
-		System.out.print("Nhập hoành độ x: ");
-		this.x = scanner.nextInt();
-		System.out.print("Nhập tung độ y: ");
-		this.y = scanner.nextInt();
+	// ham sao chep
+	public Diem(Diem d) {
+		x = d.x;
+		y = d.y;
 	}
 
-	// Hiển thị tọa độ
-	public void hienThi() {
-		System.out.println("(" + x + ", " + y + ")");
+	public void nhap() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("nhap x:");
+		x = sc.nextInt();
+		System.out.println("nhap y:");
+		y = sc.nextInt();
 	}
-
-	// Dời điểm
-	public void doiDiem(int dx, int dy) {
-		this.x += dx;
-		this.y += dy;
+	
+	// ham in khong co doi so
+	public void in() {
+		System.out.println( "(" + x + "," + y + ")" );
 	}
-
-	// Lấy hoành độ
-	public int giaTriX() {
+	
+	// ham in co doi so
+	public void in(String s) {
+		System.out.println(s);
+		in();
+	}
+	
+	//ghi de phuong thuc toString
+	public String toString() {
+		return ( "(" + x + "," + y + ")" );
+	}
+	
+	public int layX() {
 		return x;
 	}
-
-	// Lấy tung độ
-	public int giaiTriY() {
+	
+	public int layY() {
 		return y;
 	}
-
-	// Tính khoảng cách đến gốc tọa độ
-	public float khoangCach() {
-		return (float) Math.sqrt(x * x + y * y);
+	
+	public float Kcach() {
+		return (float) Math.sqrt(x*x + y*y);
 	}
-
-	// Tính khoảng cách đến điểm khác
-	public float khoangCach(Diem d) {
-		return (float) Math.sqrt(Math.pow(this.x - d.x, 2) + Math.pow(this.y - d.y, 2));
+	
+	public float kcach(Diem B) {
+		return (float) Math.sqrt( Math.pow ( (x-B.x),2) 
+                + Math.pow ( (y-B.y),2));
 	}
+	
 }
-
-
