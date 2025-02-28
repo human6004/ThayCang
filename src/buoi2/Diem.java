@@ -46,7 +46,9 @@ public class Diem {
 	public String toString() {
 		return ( "(" + x + "," + y + ")" );
 	}
-	
+	public void tinhTien(int dx, int dy) {
+		x += dx; y+=dy;
+	}
 	public int layX() {
 		return x;
 	}
