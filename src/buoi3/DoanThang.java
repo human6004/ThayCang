@@ -15,7 +15,7 @@ public class DoanThang {
 		this.d2 = new Diem(d2);
 	}
 	
-	public DoanThang(DoanThang dt) {
+	public DoanThang(DoanThang dt) {// đây là sao chép sâu 
 		d1 = new Diem(dt.d1);
 		d2 = new Diem(dt.d2);
 	}
