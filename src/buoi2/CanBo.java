@@ -2,14 +2,15 @@ package buoi2;
 
 import java.util.Scanner;
 
-public class canBo {
+public class CanBo {
 	private int maso;
 	private String hoten;
 	private Date ngaysinh;
 	private int thamnien;
 	private char xeploai;
 
-	public canBo() {
+	// hàm xây dựng ko có đối số
+	public CanBo() {
 		maso = 0;
 		hoten = new String("");
 		ngaysinh = new Date();
@@ -17,15 +18,17 @@ public class canBo {
 		xeploai = 'C';
 	}
 
-	public canBo(int maso, String hoten, Date ngaysinh, int thamnien, char xeploai) {
-		this.maso = maso;
+	// hàm xâ dựng có đối số
+	public CanBo(int maso1, String hoten, Date ngaysinh, int thamnien, char xeploai) {
+		maso = maso1; // ví dụ khai báo khác
 		this.hoten = new String(hoten);// đây là kiểu dữ liệu đối tượng nên cần cấp phát bộ nhớ
 		this.ngaysinh = new Date(ngaysinh);// đây là kiểu dữ liệu đối tượng nên cần cấp phát bộ nhớ
 		this.thamnien = thamnien;
 		this.xeploai = xeploai;
 	}
 
-	public canBo(canBo a) {
+	// hàm xây dựng sao chép
+	public CanBo(CanBo a) {
 		maso = a.maso;
 		hoten = new String(a.hoten);
 		ngaysinh = new Date(a.ngaysinh);
@@ -39,7 +42,7 @@ public class canBo {
 				+ ", xeploai: " + xeploai + "]");
 
 	}
-	
+
 	public String toString() {
 		return "[MS: " + maso + ", Ten: " + hoten + ", ngaysinh: " + ngaysinh + ", thamnien: " + thamnien
 				+ ", xeploai: " + xeploai + "]";
@@ -58,32 +61,9 @@ public class canBo {
 		System.out.print("Nhap xep loai can bo: ");
 		xeploai = sc.nextLine().charAt(0);
 	}
-	
+
 	public long khenThuong() {
-		return thamnien * ((xeploai == 'A') ? 1000000 :  (xeploai == 'B') ? 500000  : 0);
+		return thamnien * ((xeploai == 'A') ? 1000000 : (xeploai == 'B') ? 500000 : 0);
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 }
