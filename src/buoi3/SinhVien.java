@@ -27,7 +27,7 @@ public class SinhVien {
 		this.n = n;
 		this.max = max;
 		this.mon = new String[max];
-		this.diem = diem;
+		this.diem = new String[max];
 	}
 
 	public SinhVien(SinhVien s) {
@@ -42,9 +42,7 @@ public class SinhVien {
 			mon[i] = new String(s.mon[i]);
 			diem[i] = new String(s.diem[i]);
 		}
-		for (int i = 0; i < n; i++) { // sao chep cac mon mon da dang ky
 
-		}
 	}
 
 	public void nhap() {
