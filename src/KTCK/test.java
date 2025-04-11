@@ -1,4 +1,4 @@
-package Final_CK;
+package KTCK;
 
 import java.util.Scanner;
 
