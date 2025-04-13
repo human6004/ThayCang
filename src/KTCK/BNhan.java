@@ -23,7 +23,6 @@ public class BNhan {
 	
 	public void nhap() {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("nhap ten don vi dieu tri: ");
 		dvi.nhap();
 		System.out.println("nhap ten benh nhan: ");
 		ten = sc.nextLine();
@@ -50,6 +49,10 @@ public class BNhan {
 		return ngay;
 	}
 	
+	public String getMdv() {
+		return dvi.getMdv();
+	}
+	
 	public static void main(String[] args) {
 //		BNhan benhNhan = new BNhan();
 //		benhNhan.nhap();
@@ -72,8 +75,13 @@ public class BNhan {
 			System.out.println("\n\n");
 		}
 		
-		
-		
+		System.out.println("bệnh nhân cần tìm");
+		for(int i=0; i<n; i++) {
+			if(bn[i].getTen().equalsIgnoreCase("Tran Anh Hoa") && bn[i].getNgay().equals("21/11/2021")) {
+				System.out.println(bn[i].getMdv());
+				
+			}
+		}
 	}
 	
 }

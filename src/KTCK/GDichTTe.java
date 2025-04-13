@@ -32,7 +32,7 @@ public class GDichTTe extends GDich{
 	
 	public void in() {
 		super.in();
-		System.out.println("don gia: "+dgia+"\nso luong: "+sluong+ "\nloai tien te: "+loai+"\nti gia: "+tgia);
+		System.out.println("don gia: "+dgia+"\nso luong: "+sluong+ "\nloai tien te: "+loai+"\nti gia: "+tgia+"\n");
 	}
 	
 	public char getLoai() {
@@ -53,20 +53,30 @@ public class GDichTTe extends GDich{
 		GDichTTe ds[] = new GDichTTe[n];
 		for(int i=0; i<n;i++) {
 			ds[i] = new GDichTTe();
-			System.out.println("gd thứ" + (i+1)+": \n");
+			System.out.println("gd thứ " + (i+1)+":");
 			ds[i].nhap();			
 		}
 		
-		for(GDichTTe gd : ds) {
-			gd.in();
-			
+		for(int i=0; i<n;i++) {
+			System.out.println("gd thứ " + (i+1)+": \n");
+			ds[i].in();			
 		}
+//		for(GDichTTe gd : ds) {
+//			gd.in();
+//			
+//		}
 		
 		System.out.println("\ncac ma giao dich tren 1000000: ");
+		int check = 0;
 		for(GDichTTe gd : ds) {
-			if(gd.getLoai() == 'V' && gd.thanhTien() >1000000)
+			if(gd.getLoai() == 'V' && gd.thanhTien() >1000000) {
 			System.out.println(gd.getMgd());
+			check++;
+			}
 			
+		}
+		if(check==0) {
+			System.out.println("ko có giao dịch nào trên 1000000");
 		}
 	}
 

@@ -50,6 +50,10 @@ public class DVi {
 		return ("ma don vi: "+mdv+"\nten don vi: "+tendv+"\nso giuong benh: "+sogiuong+"\ntrang thai: " +dchien);
 	}
 	
+	public String getMdv(){
+		return mdv;
+	}
+	
 	public static void main(String[] args) {
 		DVi dv1 = new  DVi();
 		dv1.nhap();

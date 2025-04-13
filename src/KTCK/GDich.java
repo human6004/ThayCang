@@ -40,7 +40,7 @@ public class GDich {
 	}
 	
 	public void in () {
-		System.out.println("ma giao dich: "+mgd+"\nho ten: "+hten+"ngay: "+ngay+"\ntrang thai giao giao dich: "+ tthai+"\n");
+		System.out.print("ma giao dich: "+mgd+"\nho ten: "+hten+"\nngay: "+ngay+"\ntrang thai giao giao dich: "+ tthai+"\n");
 	}
 	
 	public int getMgd() {
