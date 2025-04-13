@@ -17,7 +17,7 @@ public class SDSinhVienCNTT {
 		int c = 0;
 
 		for (int i = 0; i < n; i++) {
-			System.out.println("ban nhap sinh (0) hay la sinh vien cntt (1) ");
+			System.out.println("ban nhap sinh vien (0) hay la sinh vien cntt (1) ");
 			c = sc.nextInt();
 			if (c == 0)
 				ds[i] = new SinhVien();

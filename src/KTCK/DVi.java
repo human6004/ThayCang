@@ -38,7 +38,7 @@ public class DVi {
 		tendv = sc.nextLine();
 		System.out.println("nhap so giuong benh: ");
 		sogiuong = sc.nextInt();
-		System.out.println("trang thaibenh vien da chien: ");
+		System.out.println("trang thai benh vien da chien: ");
 		dchien = sc.nextBoolean();
 	}
 	
