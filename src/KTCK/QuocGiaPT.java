@@ -24,7 +24,7 @@ public class QuocGiaPT extends QuocGia {
 	}
 	
 	public QuocGiaPT( QuocGiaPT qgpt) {
-		super();
+		super(qgpt);
 		ttho = qgpt.ttho;
 		chluc = qgpt.chluc;
 		dtich = qgpt.dtich;
