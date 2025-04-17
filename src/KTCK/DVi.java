@@ -38,8 +38,8 @@ public class DVi {
 		tendv = sc.nextLine();
 		System.out.println("nhap so giuong benh: ");
 		sogiuong = sc.nextInt();
-		System.out.println("trang thai benh vien da chien: ");
-		dchien = sc.nextBoolean();
+//		System.out.println("trang thai benh vien da chien: ");
+//		dchien = sc.nextBoolean();
 	}
 	
 	public void xuat() {
@@ -59,7 +59,7 @@ public class DVi {
 		dv1.nhap();
 		dv1.xuat();
 		DVi dv2 = new DVi(dv1);
-		System.out.println("\n\n hàm sao chép : ");
+		System.out.println("\n\nhàm sao chép : ");
 		dv2.xuat();
 	}
 }

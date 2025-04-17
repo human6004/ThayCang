@@ -19,7 +19,7 @@ public class CThu extends CNguoi {
 	}
 
 	public CThu(CThu ct) {
-		super();
+		super(ct);
 		so = ct.so;
 		vitri = new String(ct.vitri);
 		bthang = ct.bthang;

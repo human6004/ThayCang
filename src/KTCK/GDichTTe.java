@@ -16,6 +16,24 @@ public class GDichTTe extends GDich{
 		tgia = 0.0f;
 	}
 	
+	
+	public GDichTTe(int mgd, String hten, String ngay, boolean tthai,float dgia, int sluong, char loai, float tgia) {
+		super(mgd,hten,ngay,tthai);
+		this.dgia = dgia;
+		this.sluong = sluong;
+		this.loai = loai;
+		this.tgia = tgia;
+	}
+	
+	public GDichTTe(GDichTTe gd) {
+		super(gd);
+		dgia = gd.dgia;
+		sluong = gd.sluong;
+		loai = gd.loai;
+		tgia = gd.tgia;
+	}
+
+
 	public void nhap() {
 		super.nhap();
 		Scanner sc = new Scanner(System.in);
@@ -39,8 +57,8 @@ public class GDichTTe extends GDich{
 		return loai;
 	}
 	
-	public float thanhTien() {
-		return (float)sluong*dgia*tgia;
+	public int thanhTien() {
+		return (int)(sluong*dgia*tgia);
 	}
 	
 	public static void main(String[] args) {
@@ -59,7 +77,8 @@ public class GDichTTe extends GDich{
 		
 		for(int i=0; i<n;i++) {
 			System.out.println("gd thứ " + (i+1)+": \n");
-			ds[i].in();			
+			ds[i].in();
+			System.out.println("thành tiền: " +ds[i].thanhTien() + "\n");			
 		}
 //		for(GDichTTe gd : ds) {
 //			gd.in();
@@ -75,6 +94,14 @@ public class GDichTTe extends GDich{
 			}
 			
 		}
+		
+//		for(int i=0; i<n;i++) {
+//			if(ds[i].getLoai() == 'V' && ds[i].thanhTien() >1000000) {
+//			System.out.println(ds[i].getMgd());
+//			check++;
+//			}
+//			
+//		}
 		if(check==0) {
 			System.out.println("ko có giao dịch nào trên 1000000");
 		}

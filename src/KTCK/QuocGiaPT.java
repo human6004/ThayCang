@@ -16,8 +16,8 @@ public class QuocGiaPT extends QuocGia {
 	}
 
 
-	public QuocGiaPT(float ttho, char chluc, float dtich) {
-		super();
+	public QuocGiaPT(String msqg, String tenqg, String tenthudo, float GDP,float ttho, char chluc, float dtich) {
+		super(msqg,tenqg,tenthudo,GDP);
 		this.ttho = ttho;
 		this.chluc = chluc;
 		this.dtich = dtich;
@@ -76,7 +76,7 @@ public class QuocGiaPT extends QuocGia {
 			quocGiaPT[i].in();
 		}
 		
-		System.out.println("quoc gia co GDP lơn hơn 500\n");
+		System.out.println("quoc gia co GDP lơn hơn 500 đến từ châu phi\n");
 		for(int i =0; i<n; i++) {
 			if(quocGiaPT[i].getGDP() > 500  && (quocGiaPT[i].getchluc()=='P' || quocGiaPT[i].getchluc()=='p') ) {
 				quocGiaPT[i].in();

@@ -14,10 +14,17 @@ public class CNguoi {
 		phai =' ';
 	}
 	
+	public CNguoi(String id, String hten, String ngay, char phai) {
+		this.id = id;
+		this.hten = hten;
+		this.ngay = ngay;
+		this.phai = phai;
+	}
+
 	public CNguoi(CNguoi cn) {
 		id = new String(cn.id);
 		hten = new String(cn.hten);
-		ngay = new String(cn.hten);
+		ngay = new String(cn.ngay);
 		phai = cn.phai;
 	}
 	
@@ -46,6 +53,7 @@ public class CNguoi {
 		CNguoi c1 = new CNguoi();
 		c1.nhap();
 		c1.in();
+		System.out.println("\nnhàm sao chép:");
 		CNguoi c2 = new CNguoi(c1);
 		c2.in();
 		

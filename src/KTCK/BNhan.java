@@ -14,6 +14,15 @@ public class BNhan {
 		cnang = 0.0f;
 	}
 	
+	
+	public BNhan(DVi dvi, String ten, String ngay, float cnang) {
+		this.dvi = dvi;
+		this.ten = ten;
+		this.ngay = ngay;
+		this.cnang = cnang;
+	}
+
+
 	public BNhan(BNhan bn) {
 		dvi = new DVi(bn.dvi);
 		ten = new String(bn.ten);
@@ -76,11 +85,15 @@ public class BNhan {
 		}
 		
 		System.out.println("bệnh nhân cần tìm");
+		boolean check = false;
 		for(int i=0; i<n; i++) {
-			if(bn[i].getTen().equalsIgnoreCase("Tran Anh Hoa") && bn[i].getNgay().equals("21/11/2021")) {
+			if(bn[i].getTen().equals("Tran Anh Hoa") && bn[i].getNgay().equals("21/11/2021")) {
 				System.out.println(bn[i].getMdv());
-				
+				check = true;
 			}
+		if(check == false) {
+			System.out.println("không tìm thấy bệnh nhân!!!!");
+		}
 		}
 	}
 	
